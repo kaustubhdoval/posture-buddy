@@ -1,2 +1,2 @@
 # posture-buddy
-Perform Real Time Posture Analysis of a TCP Stream 
+Perform Real Time Posture Analysis of a TCP Stream using OpenCV and MediaPipe. 
