@@ -1,11 +1,3 @@
-"""
-On the RPI: 
-
-libcamera-vid -t 0 --width 640 --height 480 --framerate 12 --codec h264 -o - | ffmpeg -i - -c:v copy -f mpegts -listen_timeout 10000 tcp://10.0.0.23:5000?listen
-
-!Make sure that the IP address is of the Rpi
-"""
-
 import cv2
 import time
 import math as m
@@ -34,7 +26,7 @@ mp_pose = mp.solutions.pose
 pose = mp_pose.Pose()
 
 # Stream settings -> This url should be the same as the one used in the RPi camera command.
-stream_url = "tcp://10.0.0.23:5000"
+stream_url = "tcp://<RASPBERRY_IP>:5000"
 # ===============================================================================================#
 
 def sendWarning():
